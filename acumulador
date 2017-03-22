@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+
+int main(void) {
+//int i;
+int valorA;
+int valorB;
+int suma;
+int resta;
+int multiplicacion;
+int eleccion;
+int max;
+max =1;
+int min;
+int aux;
+char volverSuma;
+volverSuma='s';
+char rta;
+rta='s';
+//char palabra;
+
+//    system("cls");
+do{
+    printf("escoja una opcion: \n");
+    printf("1. para sumar \n");
+    printf("2. para restar \n");
+    printf("3. para multiplicar \n");
+    scanf("%d",&eleccion);
+
+
+    switch(eleccion){
+
+    case 1:
+        do{
+            printf("\ningrese el primer operando\n");
+            scanf("%d", &valorA);
+            while(valorA <=0){
+            printf("\ningrese otro numero\n");
+            scanf("%d",&valorA);
+
+        }//cierra while
+
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+            while(valorB <=0){
+            printf("\ningrese otro numero\n");
+            scanf("%d",&valorB);
+            }//cierra while
+        suma= valorA +valorB;
+        printf("\nel resultado de la suma es %d \n", suma);
+        aux= suma;
+
+           if(aux>max)
+                {
+                max = aux;
+                }
+            if(aux<min)
+                {
+                min = aux;
+                }
+             printf("\nel resultado mas grande es %d", max);
+             printf("\nel resultado mas chico es %d", min);
+             printf("\nsi desea hacer una operacion diferente escriba S\n");
+             fflush(stdin);
+             scanf("%c",&volverSuma);
+
+        }while (volverSuma !='s');//cierra dowhile case1
+
+        break;
+
+    case 2:
+        printf("\ningrese el primer operando\n");
+        scanf("%d", &valorA);
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+        resta= valorA -valorB;
+        printf("\nel resultado de la suma es %d \n", resta);
+        break;
+    case 3:
+        printf("\ningrese el primer operando\n");
+        scanf("%d", &valorA);
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+        multiplicacion= valorA *valorB;
+        printf("\nel resultado de la suma es %d \n", multiplicacion);
+        break;
+    default:
+        ;;
+    }//cierra switch
+    printf("\ndesea salir de la calculadora\n");
+    scanf("%c",&rta);
+    }while(rta !='s');//cierra do
+
+
+
+	return 0;
+}// cierra main
