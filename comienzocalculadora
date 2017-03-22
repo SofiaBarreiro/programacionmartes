@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+
+int main(void) {
+//int i;
+int valorA;
+int valorB;
+int suma;
+int resta;
+int multiplicacion;
+int eleccion;
+
+//char palabra;
+
+//    system("cls");
+
+    printf("escoja una opcion: \n");
+    printf("1. para sumar \n");
+    printf("2. para restar \n");
+    printf("3. para multiplicar \n");
+    scanf("%d",&eleccion);
+
+
+    switch(eleccion){
+
+    case 1:
+        printf("\ningrese el primer operando\n");
+        scanf("%d", &valorA);
+            while(valorA <=0){
+            printf("\ningrese otro numero\n");
+            scanf("%d",&valorA);
+
+        }//cierra while
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+            while(valorB <=0){
+            printf("\ningrese otro numero\n");
+            scanf("%d",&valorB);
+            }//cierra while
+        suma= valorA +valorB;
+        printf("\nel resultado de la suma es %d \n", suma);
+        break;
+
+    case 2:
+        printf("\ningrese el primer operando\n");
+        scanf("%d", &valorA);
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+        resta= valorA -valorB;
+        printf("\nel resultado de la suma es %d \n", resta);
+        break;
+    case 3:
+        printf("\ningrese el primer operando\n");
+        scanf("%d", &valorA);
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+        multiplicacion= valorA *valorB;
+        printf("\nel resultado de la suma es %d \n", multiplicacion);
+        break;
+    default:
+        ;;
+
+    }//cierra switch
+
+	return 0;
+}// cierra main
