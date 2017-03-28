@@ -1,42 +1,48 @@
 #include <stdio.h>
 
 
-int main(void) {
+int main(void)
+{
 //int i;
-int valorA;
-int valorB;
-int suma;
-int resta;
-int multiplicacion;
-int eleccion;
+    int valorA;
+    int valorB;
+    int suma;
+    int resta;
+    int multiplicacion;
+    int division;
+    int eleccion=5;
 
-//char palabra;
+do{
 
-//    system("cls");
 
     printf("escoja una opcion: \n");
     printf("1. para sumar \n");
     printf("2. para restar \n");
     printf("3. para multiplicar \n");
+    printf("4. para dividir \n");
+    printf("5.salir");
     scanf("%d",&eleccion);
 
 
-    switch(eleccion){
+    switch(eleccion)
+    {
 
     case 1:
         printf("\ningrese el primer operando\n");
         scanf("%d", &valorA);
-            while(valorA <=0){
+        while(valorA <=0)
+        {
             printf("\ningrese otro numero\n");
             scanf("%d",&valorA);
 
         }//cierra while
         printf("\ningrese el segundo operando\n");
         scanf("%d", &valorB);
-            while(valorB <=0){
+        while(valorB <=0)
+        {
             printf("\ningrese otro numero\n");
             scanf("%d",&valorB);
-            }//cierra while
+        }//cierra while
         suma= valorA +valorB;
         printf("\nel resultado de la suma es %d \n", suma);
         break;
@@ -47,7 +53,7 @@ int eleccion;
         printf("\ningrese el segundo operando\n");
         scanf("%d", &valorB);
         resta= valorA -valorB;
-        printf("\nel resultado de la suma es %d \n", resta);
+        printf("\nel resultado de la resta es %d \n", resta);
         break;
     case 3:
         printf("\ningrese el primer operando\n");
@@ -55,12 +61,21 @@ int eleccion;
         printf("\ningrese el segundo operando\n");
         scanf("%d", &valorB);
         multiplicacion= valorA *valorB;
-        printf("\nel resultado de la suma es %d \n", multiplicacion);
+        printf("\nel resultado de la multiplicacion es %d \n", multiplicacion);
+        break;
+    case 4:
+        printf("\ningrese el primer operando\n");
+        scanf("%d", &valorA);
+        printf("\ningrese el segundo operando\n");
+        scanf("%d", &valorB);
+        division= valorA /valorB;
+        printf("\nel resultado de la division es %d \n", division);
         break;
     default:
         ;;
 
     }//cierra switch
+    }while(eleccion==5);
 
-	return 0;
+    return 0;
 }// cierra main
