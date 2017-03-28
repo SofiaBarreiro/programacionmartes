@@ -1,15 +1,20 @@
 #include <stdio.h>
 
+int resta(int a, int b);
+int multiplicacion(int a, int b);
+double division(double a, double b);
+
 
 int main(void)
 {
 //int i;
     int valorA;
     int valorB;
+    double valorC;
+    double valorD;
+    int z;
+    double y;
     int suma;
-    int resta;
-    int multiplicacion;
-    int division;
     int eleccion=5;
 
 do{
@@ -52,24 +57,24 @@ do{
         scanf("%d", &valorA);
         printf("\ningrese el segundo operando\n");
         scanf("%d", &valorB);
-        resta= valorA -valorB;
-        printf("\nel resultado de la resta es %d \n", resta);
+        z=resta(valorA,valorB);
+        printf("\nel resultado de la resta es %d \n", z);
         break;
     case 3:
         printf("\ningrese el primer operando\n");
         scanf("%d", &valorA);
         printf("\ningrese el segundo operando\n");
         scanf("%d", &valorB);
-        multiplicacion= valorA *valorB;
-        printf("\nel resultado de la multiplicacion es %d \n", multiplicacion);
+        z=multiplicacion(valorA,valorB);
+        printf("\nel resultado de la multiplicacion es %d \n", z);
         break;
     case 4:
         printf("\ningrese el primer operando\n");
-        scanf("%d", &valorA);
+        scanf("%f", &valorC);
         printf("\ningrese el segundo operando\n");
-        scanf("%d", &valorB);
-        division= valorA /valorB;
-        printf("\nel resultado de la division es %d \n", division);
+        scanf("%f", &valorD);
+        y=division(valorC, valorD);
+        printf("\nel resultado de la division es %f \n", y);
         break;
     default:
         ;;
@@ -79,3 +84,22 @@ do{
 
     return 0;
 }// cierra main
+
+    int resta (int a, int b)
+    {
+    int total;
+    total= a-b;
+    return total;
+    }
+    int multiplicacion(int a, int b)
+    {
+    int total;
+    total=a*b;
+    return total;
+    }
+    double division(double a, double b)
+    {
+    double total;
+    total=a/b;
+    return total;
+    }
