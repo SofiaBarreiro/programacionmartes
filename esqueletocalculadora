@@ -35,10 +35,10 @@ int main()
         switch(opcion)
         {
             case 1:
-		int ingValorA(int a);//llamada la funcion;
+		valorA=ingValorA(int a);//llamada la funcion;
                 break;
             case 2:
-                int ingValorB(int b);//llamada a la funcion
+                valorB=ingValorB(int b);//llamada a la funcion
                 break;
             case 3:
 		total=suma(valorA,valorB);//llamada la funcion suma
@@ -82,15 +82,16 @@ int ingValorA(int a)
 {// esta funcion es para ingresar el valor A entero
 	int valorA;
 	printf("ingresar el primer valor");
-	scanf("%d",&valorA);
+	scanf("%d",&a);
+	valorA=a;
 	return valorA;
-
 }
 int ingValorB(int b)
 {//esta funcion es para ingresar el valor B entero
 	int valorB;
 	printf("ingresar el segundo valor");
-	scanf("%d",&valorB);
+	scanf("%d",&b);
+	valorB=b
 	return valorB;
 }
 int suma(int a, int b)
