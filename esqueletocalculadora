@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+int ingValorA(int a);
+int ingValorB(int b);
+int resta(int a, int b);
+float division(float c, float d);
+int multiplicacion(int a, int b);
+
+int main()
+{
+    char seguir='s';
+    int opcion=0;
+    int valorA;
+    int valorB;
+    float valorC;
+    float valorD;
+    int total;		
+
+    while(seguir=='s')
+    {
+        printf("1- Ingresar 1er operando (A=x)\n");
+        printf("2- Ingresar 2do operando (B=y)\n");
+        printf("3- Calcular la suma (A+B)\n");
+        printf("4- Calcular la resta (A-B)\n");
+        printf("5- Calcular la division (A/B)\n");
+        printf("6- Calcular la multiplicacion (A*B)\n");
+        printf("7- Calcular el factorial (A!)\n");
+        printf("8- Calcular todas las operacione\n");
+        printf("9- Salir\n");
+
+        scanf("%d",&opcion);
+
+        switch(opcion)
+        {
+            case 1:
+		int ingValorA(int a);//llamada la funcion;
+                break;
+            case 2:
+                int ingValorB(int b);//llamada a la funcion
+                break;
+            case 3:
+		printf("\nel resultado de la suma es %d \n", total);	
+		break;
+            case 4:
+        	total=resta(valorA,valorB);//llamada la funcion resta
+        	printf("\nel resultado de la resta es %d \n", total);
+
+                break;
+            case 5:
+		printf("\nel resultado de la division es %f \n", total);
+                break;
+            case 6:
+		printf("\nel resultado de la multiplicacion es %d \n", total);
+                break;
+        
+            case 7:
+		printf("\nel factorial es %d es %(long)\n", valorA,total);
+
+                break;
+            case 8:
+		printf("\nel resultado de la suma es %d \n", total);	
+		printf("\nel resultado de la resta es %d \n", total);
+		printf("\nel resultado de la division es %f \n", total);
+		printf("\nel resultado de la multiplicacion es %d \n", total);
+		printf("\nel factorial es %d es %(long)\n", valorA,total);
+
+                break;
+            case 9:
+                seguir = 'n';
+                break;
+        }
+
+
+    return 0;
+}
+
+
+int ingValorA(int a)
+{// esta funcion es para ingresar el valor A entero
+	int valorA;
+	printf("ingresar el primer valor");
+	scanf("%d",&valorA);
+	return valorA;
+
+}
+int ingValorB(int b)
+{//esta funcion es para ingresar el valor B entero
+	int valorB;
+	printf("ingresar el segundo valor");
+	scanf("%d",&valorB);
+	return valorB;
+}
+int resta (int a, int b)
+{// esta funcion devuelve el total de una resta
+    int total;
+    total= a-b;
+    return total;
+}
+float division(float c, float d)
+{// esta funcion devuelve el total de una division
+    float total;
+    total= a*b;
+    return total;
+}
+int multiplicacion(int a, int b)
+{// esta funcion devuelve el total de una multiplicacion
+    int total;
+    total= a*b;
+    return total;
+}
