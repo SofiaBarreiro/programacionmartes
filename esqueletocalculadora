@@ -3,6 +3,7 @@
 #include "funciones.h"
 int ingValorA(int a);
 int ingValorB(int b);
+int suma(int a, int b);
 int resta(int a, int b);
 float division(float c, float d);
 int multiplicacion(int a, int b);
@@ -40,6 +41,7 @@ int main()
                 int ingValorB(int b);//llamada a la funcion
                 break;
             case 3:
+		total=suma(valorA,valorB);//llamada la funcion suma
 		printf("\nel resultado de la suma es %d \n", total);	
 		break;
             case 4:
@@ -47,10 +49,11 @@ int main()
         	printf("\nel resultado de la resta es %d \n", total);
 
                 break;
-            case 5:
+            case 5:		
 		printf("\nel resultado de la division es %f \n", total);
                 break;
             case 6:
+		total=multiplicacion(valorA,valorB);//llamada la funcion multiplicacion
 		printf("\nel resultado de la multiplicacion es %d \n", total);
                 break;
         
@@ -64,7 +67,6 @@ int main()
 		printf("\nel resultado de la division es %f \n", total);
 		printf("\nel resultado de la multiplicacion es %d \n", total);
 		printf("\nel factorial es %d es %(long)\n", valorA,total);
-
                 break;
             case 9:
                 seguir = 'n';
@@ -91,6 +93,12 @@ int ingValorB(int b)
 	scanf("%d",&valorB);
 	return valorB;
 }
+int suma(int a, int b)
+{// esta funcion devuelve el total de una suma
+    int total;
+    total= a+b;
+    return total;
+}
 int resta (int a, int b)
 {// esta funcion devuelve el total de una resta
     int total;
@@ -98,8 +106,10 @@ int resta (int a, int b)
     return total;
 }
 float division(float c, float d)
-{// esta funcion devuelve el total de una division
+{// esta funcion devuelve el total de una division y castea dos variables que son enteras
     float total;
+//castear valorA
+//castear valorB
     total= a*b;
     return total;
 }
