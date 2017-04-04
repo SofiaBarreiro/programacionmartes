@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+char menu;
+int legajo[100];
+float  sueldo[100];
+int edad [100];
+char nombre[100][21];
+int i;
+
+
+    for(i=0;i<5;i++){
+    printf("\ningrese su nro de legajo");
+    scanf("%d", &legajo[i]);
+    printf("\ningrese su edad");
+    scanf("%d", &edad[i]);
+    printf("\ningrese su nombre");
+    fflush(stdin);
+    fgets(nombre[i],21,stdin);
+    printf("ingrese su sueldo");
+    scanf("%f", &sueldo[i]);
+
+    }
+    for(i=0;i<5; i++)
+    {
+    printf("\n nombre: %s", nombre[i]);
+    printf("\n el nro de legajo es %d", legajo[i]);
+    printf("\n la edad es %d", edad[i]);
+    printf("\n el sueldo es de %f", sueldo[i]);
+    }
+    
+
+
+    return 0;
+}
