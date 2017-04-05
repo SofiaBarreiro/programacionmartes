@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+#include<ctype.h>
+
+
+int main()
+{
+
+//char menu;
+//int legajo[100];
+//float  sueldo[100];
+//int edad [100];
+//char nombre[21];
+//char nombre2[21];
+//int i;
+
+    /**for(i=0;i<2;i++)
+    {
+    printf("\ningrese su nro de legajo");
+    scanf("%d", &legajo[i]);
+    printf("\ningrese su edad");
+    scanf("%d", &edad[i]);
+    printf("\ningrese su nombre");
+    fflush(stdin);
+    fgets(nombre[i],21,stdin);
+    printf("ingrese su sueldo");
+    scanf("%f", &sueldo[i]);
+
+    }
+    for(i=0;i<2; i++)
+    {
+    printf("\n nombre: %s", nombre[i]);
+    printf("\n el nro de legajo es %d", legajo[i]);
+    printf("\n la edad es %d", edad[i]);
+    printf("\n el sueldo es de %f", sueldo[i]);
+
+    }
+    */
+
+char nombre[21];
+char nomape[21];
+nomape[0]='\0';
+//int x;
+
+    printf("\n ingrese nombre");
+    gets(nombre);
+    printf("\n ingrese nombre");
+    gets(nomape);
+    //if(strcmp(nombre,noape)==0){
+    //printf("Password correcto");
+    //}
+    //else{
+    //printf("\nPassword incorrecto");
+    //strcpy(nombre2,nombre);
+    //printf("\nSe ingreso:%s la copia es:%s",nombre,nombre2);
+    //x=strlen(nombre);
+    //printf("\nla palabra tiene %d letras", x);
+    //strupr(nombre);
+    //printf("\nSe ingreso:%s",nombre);
+
+
+    strcat(nomape,""nombre);
+    strcat(nomape, " ");
+    printf("es %s", nomape);
+    
+    //}
+
+
+
+    /**if(strcmp("1234","1234")==0){
+    printf("Password correcto");
+    }
+    else{
+    printf("Password incorrecto");
+    }*/
+    return 0;
+}
