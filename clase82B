@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define E 5
+
+typedef struct
+{
+    int legajos[E];
+    int estado[E]= {0};
+    int auxInt;
+    char nombres[E][20];
+    auxString[20];
+    float sueldos[E], auxFloat;
+
+
+} Eempleado;
+
+int main()
+{
+    int opcion;
+    char seguir ='s', respuesta;
+
+    do
+    {
+        printf("1.Alta\n2.Baja\n3.Modificacion\n4.ordenar\n5. mostrar\n6.salir\n");
+        printf("Elija una opcion: ");
+        scanf("%d", &opcion);
+        switch(opcion)
+        {
+        case 1:
+            
+
+            for(i=0; i<tam; i++)
+            {
+                if(empleados[i].estado==0)
+                {
+                    Eempleado empleado[20];
+                    printf("Ingrese legajo: ");
+                    scanf("%d", &empleado[i].legajo);
+                    printf("Ingrese nombre: ");
+                    fflush(stdin);//hay que hacer fflush antes de pasar un gets porque es un char, si no, va a mostrar basura
+                    gets(empleado[i].nombres);
+                    printf("Ingrese sueldo: ");
+                    scanf("%f", &empleado[i].sueldos);
+
+                    empleado[i].estado = 1;//si el numero de lagajo fue ingresado el estado tiene que pasar a uno, para que indique que esa fila ya tiene un dato
+                    flagEncontro = 1;//pasa a 1 porque cuando estaba en cero estaba vacio
+
+                    break;
+                }
+            }
+            if(!flagEncontro)
+            {
+                printf("No hay espacio suficiente!!!");//significa que todos los estados flagencontro estan con unos, es decir, tienen informacion y no hay lugares vacios
+            }
+        case 2:
+                int flagEncontro=0, i;//flag inicia en cero, significa que encontro lugares para eliminar
+    int auxInt;//
+    char respuesta;
+    printf("Ingrese legajo: ");
+    scanf("%d", &auxInt);
+    for(i=0; i<tam; i++)
+    {
+        //inicializador
+        if(estados[i]==1)//si estado esta en 1 es decir tiene informacion, entonces...
+        {
+            if(auxInt == legajos[i])
+            {
+                printf("%d\t%s\t%.2f\n", legajos[i],nombres[i],sueldos[i]);//va a mostrar el dato a eliminar
+
+                printf("Esta seguro de eliminar el dato s/n: ");
+                respuesta = getche();
+                if(respuesta=='s')
+                {
+                    estados[i] = 0;//pasa los estados a cero, eso significa que los datos estan cargados, pero no se va a mostrar porque solo se muestra los estados en uno
+                }
+                else
+                {
+                    printf("Accion cancelada por el usuario!!!");//si responde que no en la opcion anterior el dato no se va a eliminar
+                }
+
+                flagEncontro=1;//
+                break;//para deje de iterar. Si  no, va a seguir saliendo hasta cinco veces mas
+
+            }
+
+        }
+    }
+    if(flagEncontro==0)
+    {
+        printf("Dato inexistente");//si no tiene datos para eliminar
+    }
+        
+        }
+        while(seguir=='s');
+
+        return 0;
+    }
